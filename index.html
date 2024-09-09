@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body style="background-color: yellow;" class="flex items-center justify-center h-screen">
+
+  <!-- Login Form -->
+  <div style='background-color: yellow;' class="w-full max-w-md shadow-md rounded-lg p-8">
+    <h2 class="text-2xl font-bold mb-6 text-center"> بەشی زانستی کۆمپیتەر و تەکنەلۆژیای زانیاری</h2>
+    <form id="loginForm" class="space-y-6" onsubmit="handleLogin(event)">
+      <!-- Email Input -->
+      <div>
+        <label for="email" class="block text-gray-700 font-medium">ئیمەیڵ :</label>
+        <input id="email" type="email" class="w-full mt-2 p-2 border border-gray-300 rounded-md focus:ring focus:ring-indigo-200 focus:outline-none" placeholder="تکایە  ئیمەیڵ داخل بکە" required>
+      </div>
+      
+      <!-- Password Input -->
+      <div>
+        <label for="password" class="block text-gray-700 font-medium"> پاسوۆرد :</label>
+        <input id="password" type="password" class="w-full mt-2 p-2 border border-gray-300 rounded-md focus:ring focus:ring-indigo-200 focus:outline-none" placeholder="تکایە  پاسوۆرد داخل بکە" required>
+      </div>
+
+      <!-- Submit Button -->
+      <div>
+        <button type="submit" class="w-full bg-indigo-500 text-white font-bold py-2 px-4 rounded hover:bg-indigo-600">چونەژوورەوە</button>
+      </div>
+    </form>
+
+    <!-- Message -->
+    <div id="message" class="mt-4 hidden text-center text-black font-bold"></div>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function handleLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById('email').value;
+      const messageDiv = document.getElementById('message');
+      messageDiv.textContent = `سوپاس بۆ چاوەڕوانی 😂`;
+      messageDiv.classList.remove('hidden');
+    }
+  </script>
+
+</body>
+</html>
